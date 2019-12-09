@@ -10,7 +10,7 @@
 
 # 如何引入使用使用
  ## 1.引入依赖:
-        <ejpa.starter.version>1.0.0</ejpa.starter.version>
+        <ejpa.starter.version>2.0.0</ejpa.starter.version>
          <dependency>
              <groupId>vip.efactory</groupId>
              <artifactId>ejpa-spring-boot-starter</artifactId>
@@ -18,7 +18,7 @@
              <type>pom</type>
          </dependency>
   ## 2.继承模板:
-        public class CartonFormingEntity extends BaseEntity {}
+        public class CartonFormingEntity extends BaseEntity<Long> {}
             继承了BaseEntity 就会额外获得基本的常见属性
         public interface CartonFormingRepository extends BaseRepository<CartonFormingEntity, Long> {}
             继承了BaseRepository就会获的模板的持久层一些额外可用的方法,Long是指主键类型
@@ -115,3 +115,9 @@
 http://localhost:8080/carton/advanced/query 
 
 POST的方法带上上面的Json对象即可!
+
+# V2.0.0 升级内容：
+- 升级了依赖的版本到2019-12-9最新版；
+- 优化了请求的响应体R类；
+- 实现主键不在BaseEntity中定义，移植到子类中，以便具有更大的灵活性；
+- 修复了工具类中版本比较存在的潜在错误。

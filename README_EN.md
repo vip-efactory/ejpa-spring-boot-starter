@@ -10,7 +10,7 @@ The features provided are:
 
 # How to use?
    ## 1. Introducing dependencies:
-        <ejpa.starter.version>1.0.0</ejpa.starter.version>
+        <ejpa.starter.version>2.0.0</ejpa.starter.version>
          <dependency>
              <groupId>vip.efactory</groupId>
              <artifactId>ejpa-spring-boot-starter</artifactId>
@@ -18,7 +18,7 @@ The features provided are:
              <type>pom</type>
          </dependency>
    ## 2. Inheritance template:
-        public class CartonFormingEntity extends BaseEntity {}
+        public class CartonFormingEntity extends BaseEntity<Long> {}
             继承了BaseEntity 就会额外获得基本的常见属性
         public interface CartonFormingRepository extends BaseRepository<CartonFormingEntity, Long> {}
             继承了BaseRepository就会获的模板的持久层一些额外可用的方法,Long是指主键类型
@@ -123,9 +123,15 @@ When there is a lot of traffic data, it is very important to query the data from
     }
 
    
--The meaning of the example is: there are two query conditions, id field and handoverTime field, the relationship between the two fields is satisfied at the same time: id=2 and the handoverTime value is between "12:00" and "13:00"
+- The meaning of the example is: there are two query conditions, id field and handoverTime field, the relationship between the two fields is satisfied at the same time: id=2 and the handoverTime value is between "12:00" and "13:00"
 
 Example of use:
 Http://localhost:8080/carton/advanced/query
 
 POST method can bring the above Json object!
+
+# V2.0.0 Upgrade content:
+- Updated dependent version to 2019-12-9 latest version;
+- Optimized the request response body R class;
+- The implementation of the primary key is not defined in BaseEntity, and is transplanted into subclasses for greater flexibility;
+- Fixed a potential bug in version comparison in the tool class.
