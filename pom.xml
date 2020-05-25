@@ -5,7 +5,7 @@
 
     <groupId>vip.efactory</groupId>
     <artifactId>ejpa-spring-boot-starter</artifactId>
-    <version>3.5.1</version>
+    <version>3.6.0</version>
     <packaging>pom</packaging>
     <name>ejpa-spring-boot-starter</name>
     <description>基于jpa再封装,常用的模板CRUD,分页排序,多字段高级搜索、国际化，属性校验,多租户等功能,详见：https://github.com/vip-efactory/ejpa-example.git</description>
