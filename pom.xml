@@ -15,7 +15,7 @@
         <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
         <ejpa.version>${project.version}</ejpa.version>
 <!--        <ejpa.version>3.3.2</ejpa.version>-->
-        <beanutils.version>1.9.3</beanutils.version>
+        <beanutils.version>1.9.4</beanutils.version>
         <swagger-starter.version>1.9.0.RELEASE</swagger-starter.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>
